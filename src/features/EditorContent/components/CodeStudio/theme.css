@@ -1,0 +1,68 @@
+/* import off ts */
+.import {
+    color: #e03767;
+}
+
+/* from off ts */
+.from {
+    color: aqua;
+}
+
+/* strings in general */
+.string  {
+    color: burlywood;
+}
+
+/* . or { } */
+.punctuation {
+    color: coral;
+}
+
+/* ; */
+.terminator {
+    color: green;
+}
+
+.numeric  {
+    background-color: #e03767;
+}
+
+.variable.other.readwrite.alias.ts {
+    color: darkorchid;
+}
+
+.storage.type.interface.ts {
+    color: dodgerblue;
+}
+
+.entity.name.type.interface.ts {
+    color: deeppink;
+}
+
+.storage.modifier.ts {
+    color: gold;
+}
+
+.entity.other.inherited-class.ts {
+    color: chocolate;
+}
+
+.storage.type.class.ts {
+    color: cadetblue;
+}
+
+.entity.name.type.class.ts {
+    color: chartreuse;
+}
+
+.keyword.operator.type.annotation.ts {
+    color: orangered;
+}
+
+.storage.modifier.async.ts {
+    color: #999;
+}
+
+.meta.definition.method.ts {
+    color: #7159c1;
+}

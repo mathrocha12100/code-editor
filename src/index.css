@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, #root {
+    width: 100vw;
+    height: 100vh;
+}
+
+@layer base {
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-weight: 300;
+        src: url(/src/assets/fonts/JetBrainsMono-Light.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-weight: 100;
+        src: url(/src/assets/fonts/JetBrainsMono-Thin.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-weight: normal;
+        src: url(/src/assets/fonts/JetBrainsMono-Regular.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-weight: 500;
+        src: url(/src/assets/fonts/JetBrainsMono-Medium.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-weight: 700;
+        src: url(/src/assets/fonts/JetBrainsMono-Bold.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: Jetbrains Mono;
+        font-style: italic;
+        src: url(/src/assets/fonts/JetBrainsMono-Italic.ttf) format("truetype");
+    }
+
+    /* INTER */
+
+    @font-face {
+        font-family: Inter;
+        font-weight: normal;
+        src: url(/src/assets/fonts/Inter-Regular.ttf) format("truetype");
+    }
+
+     @font-face {
+        font-family: Inter;
+        src: url(/src/assets/fonts/Inter-Medium.ttf) format("truetype");
+        font-weight: 500;
+    }
+    @font-face {
+        font-family: Inter;
+        src: url(/src/assets/fonts/Inter-SemiBold.ttf) format("truetype");
+        font-weight: 600;
+    }
+    @font-face {
+        font-family: Inter;
+        src: url(/src/assets/fonts/Inter-Medium.ttf) format("truetype");
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: Inter;
+        src: url(/src/assets/fonts/Inter-Bold.ttf) format("truetype");
+        font-weight: 700;
+    }
+}

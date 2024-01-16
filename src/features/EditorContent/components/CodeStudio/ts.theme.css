@@ -1,0 +1,77 @@
+.storage.type.function.ts {
+    color: #FF7A84;
+    font-style: italic;
+}
+
+.meta.definition.function.ts {
+   color: #b392f0; 
+}
+    
+.punctuation.definition.parameters.begin.ts, .punctuation.definition.parameters.end.ts {
+    color: #ffab70;
+}
+
+.punctuation.definition.block.ts {
+   color: #6b737c; 
+}
+
+.keyword.control.flow.ts {
+    color: #FF7A84;
+}
+
+.punctuation.terminator.statement.ts {
+    color: #FF7A84;
+}
+
+.storage.type.ts {
+    color: #FF7A84;
+}
+
+.meta.var-single-variable.expr.ts, .meta.object.member.ts {
+    color: #79b8ff;
+}
+
+.support.class.ts {
+    color: #79b8ff;
+}
+
+.meta.function-call.ts {
+   color: #b392f0; 
+}
+
+.meta.brace.round {
+    color: #ffab70;
+}
+
+.keyword.operator.assignment.ts {
+    color: #FF7A84;
+}
+
+.punctuation.separator.key-value.ts {
+    color: #FF7A84;
+}
+
+.numeric.decimal {
+   color: rgb(50, 240, 196)
+}
+
+.string.quoted {
+    color: #ffab70;
+}
+
+/* BOOLEANS */
+
+.language.boolean.false {
+    color: #fb5361;
+}
+
+.language.boolean.true {
+    color: #536cfb;
+}
+/*  */
+
+/* Array */
+.meta.brace.square.ts {
+    color: #be00be;
+    font-style: italic;
+}
