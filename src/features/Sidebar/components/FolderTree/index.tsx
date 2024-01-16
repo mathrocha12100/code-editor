@@ -14,7 +14,7 @@ type FolderTreeProps = {
 };
 
 const folderTreeContainer = tv({
-	base: "flex flex-col",
+	base: "flex flex-col mt-0.5 mb-0.5",
 	variants: {
 		notRoot: {
 			true: "ml-2",

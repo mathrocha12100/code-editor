@@ -14,7 +14,7 @@ type ListFileProps = {
 };
 
 const listFileContainer = tv({
-	base: "",
+	base: "mt-0.5 mb-0.5",
 	variants: {
 		notRoot: {
 			true: "ml-2",

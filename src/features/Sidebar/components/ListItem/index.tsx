@@ -27,7 +27,7 @@ function RenderIcon({ type, text = "" }: Pick<ListItemProps, "type" | "text">) {
 	if (type === "file") {
 		return (
 			<DevIcon
-				className='mr-1.5 h-[18px] w-[18px] text-red-primary'
+				className='mr-1.5 h-5 w-5 text-red-primary'
 				type='file'
 				icon={{
 					name: getFileExt(text),
