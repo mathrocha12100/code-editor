@@ -46,7 +46,14 @@ function FolderTree({ folder, isRoot }: FolderTreeProps) {
 	};
 
 	const handleFolder = () => {
-		setCurrent(() => ({ action: "selected", path: [folder.path] }));
+		setCurrent((state) => {
+			if (state.path?.includes(folder.path)) {
+				return state;
+			}
+
+			return { action: "selected", path: [folder.path] };
+		});
+
 		setOpen(!open);
 	};
 

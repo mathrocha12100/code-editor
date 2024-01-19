@@ -7,6 +7,7 @@ export default {
 				primary: "#1f1f1f",
 				secondary: "#1a1a1a",
 				tertiary: "#282424",
+				"gray-primary": "#353536",
 				"red-primary": "#fa4654",
 				"white-primary": "#E0E0E0",
 				"purple-primary": "#b392f0",

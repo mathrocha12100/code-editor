@@ -45,7 +45,13 @@ function ListFile({ file, isRoot }: ListFileProps) {
 	};
 
 	function handleSelectFile() {
-		setCurrent(() => ({ action: "selected", path: [file.path] }));
+		setCurrent((state) => {
+			if (state.path?.includes(file.path)) {
+				return state;
+			}
+
+			return { action: "selected", path: [file.path] };
+		});
 		handleFiles((state) => {
 			if (state.find(({ path }) => path === file.path)) {
 				return state;

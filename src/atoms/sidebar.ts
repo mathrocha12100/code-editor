@@ -11,7 +11,7 @@ export type CtxMenuProps = {
 
 export type CurrentSelectedProps = {
 	path: string[] | null;
-	action: "editing" | "cut-or-copy" | "selected" | null;
+	action: "editing" | "cut" | "copy" | "selected" | null;
 };
 
 export type CtxMenuType = "actions" | "create" | null;

@@ -1,4 +1,9 @@
-import { CtxMenuProps, CtxMenuType, projectFiles } from "@/atoms/sidebar";
+import {
+	CtxMenuProps,
+	CtxMenuType,
+	currentSelected,
+	projectFiles,
+} from "@/atoms/sidebar";
 import { MenuItem } from "@/components/Menu";
 import Item from "@/components/Menu/Item";
 import useToast from "@/hooks/useToast";
@@ -18,6 +23,7 @@ import useList from "./useList";
 function useMenuItems(ctxMenu: CtxMenuProps, type: CtxMenuType) {
 	const { removeListEntry } = useList();
 	const { showToast } = useToast();
+	const setCurrent = useSetRecoilState(currentSelected);
 	const setList = useSetRecoilState(projectFiles);
 
 	const openInExplorer = async () => {
@@ -26,8 +32,8 @@ function useMenuItems(ctxMenu: CtxMenuProps, type: CtxMenuType) {
 		await invoke("show_in_os_explorer", { path: ctxMenu.path });
 	};
 
-	const deleteFileOrFolder = async () => {
-		if (!ctxMenu.path || !ctxMenu.type) return;
+	const deleteAction = async () => {
+		if (!ctxMenu.path || !ctxMenu.type || ctxMenu.type === "root") return;
 
 		try {
 			const fnName = ctxMenu.type === "file" ? "delete_file" : "delete_folder";
@@ -44,6 +50,14 @@ function useMenuItems(ctxMenu: CtxMenuProps, type: CtxMenuType) {
 		} catch (err) {
 			showToast({ message: String(err), type: "error" });
 		}
+	};
+
+	const copyAction = async () => {};
+
+	const renameAction = () => {
+		if (!ctxMenu.path) return;
+
+		setCurrent({ action: "editing", path: [ctxMenu.path] });
 	};
 
 	const getMenuItems = (): MenuItem[] => {
@@ -75,9 +89,9 @@ function useMenuItems(ctxMenu: CtxMenuProps, type: CtxMenuType) {
 						action: () => 0,
 						spacing: true,
 					},
-					{ action: () => 0, content: <Item text='Rename' Icon={FileEdit} /> },
+					{ action: renameAction, content: <Item text='Rename' Icon={FileEdit} /> },
 					{
-						action: deleteFileOrFolder,
+						action: deleteAction,
 						content: <Item text='Delete' Icon={Trash2} />,
 						spacing: true,
 					},
